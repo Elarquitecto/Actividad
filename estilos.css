@@ -1,0 +1,292 @@
+body {
+	font-family: Dancing script, cursive;
+	background-color: #02010a;
+}
+
+img {
+	box-shadow: 2px 2px #02010a
+}
+
+.cabecera {
+	background-color: #5b7989;
+	color: white;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.cabecera h1 {
+	text-shadow: 2px 2px 0 #02010a;
+	text-align: left
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu li {
+    float: right;
+}
+
+.menu li a {
+    display: block;
+    padding: 8px;
+    color: goldenrod;
+	text-decoration: none;
+}
+
+.menu li a:hover {
+	color:lawngreen
+}
+
+.imagen_central {
+	background-color: #82c3a6;
+}
+
+.imagen_central img {
+    width: 100%;
+    height: auto;
+}
+
+#contenedor {
+	display: flex;
+	flex-direction: column;
+	background-color: #d5c75f;
+}
+
+.imagen_secundaria {
+	display: flex;
+	flex-direction: row;
+}
+
+.imagen_secundaria img {
+	height: auto;
+	width: 100%;
+	border: solid 1px;
+}
+
+#imagen1 img:hover {
+	transform: rotateZ(10deg);
+	box-shadow: 5px -9px 3px #82c3a6;
+	border: solid 2px;
+}
+
+#imagen2 img:hover {
+	transform: translate(20px, -5px);
+	box-shadow: 5px -9px 3px #82c3a6;
+	border: solid 2px;
+}
+
+li {
+	list-style-type: none;
+}
+
+.icon-facebook {
+	list-style-type: none;
+    padding-left: 1.5em;
+    background-image: url(../Imagenes/facebook-media-social-like-network-fb-icon.svg);
+    background-size: 1.5em;
+    background-repeat: no-repeat;
+}
+
+.icon-tweeter {
+	list-style-type: none;
+    padding-left: 1.5em;
+    background-image: url(../Imagenes/twitter-icon.svg);
+    background-size: 1.5em;
+    background-repeat: no-repeat;
+}
+
+.icon-googleplus {
+	list-style-type: none;
+    padding-left: 1.5em;
+    background-image: url(../Imagenes/google-g-plus-googleplus-icon.svg);
+    background-size: 1.5em;
+    background-repeat: no-repeat;
+}
+
+#footer {
+background: #C6d5c5;
+width:100%;
+clear: both;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+display: table;
+	display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+footer > section {
+    display: table-cell;
+    padding: 1em;
+}
+
+#footer li a {
+	text-decoration: none;
+	color: black;
+}
+
+#footer li a:hover {
+	text-decoration: underline;
+	color: blue;
+}
+
+.contenido {
+	width: 900px;
+	align-content: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.cabecera, .imagen_secundaria, #contenedor, #footer {
+	width: 100%;
+}
+
+@media (max-width: 400px) {
+	.contenido {
+		width: 100%;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.cabecera {
+    height: 100%;
+    -webkit-order: 1;
+    order: 1;
+  }
+	.cabecera h1 {
+		text-align: center
+	}
+	.menu ul{
+		justify-content: center;
+	}
+  .imagen_central {
+    height: 100%;
+    -webkit-order: 2;
+    order: 2;
+  }
+  #contenedor {
+    height: 100%;
+    -webkit-order: 3;
+    order:3;	
+	}
+	.imagen_secundaria {
+	display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+	#footer {
+		height: 100%;
+		-webkit-order:4;
+		order: 4;
+	}
+	#contacto {
+		width: 100%;
+	}
+	#politicas {
+		width: 100%;
+	}
+	#redes {
+		width: 100%;
+	}
+	#derechos {
+		width: 100%;
+	}
+	.imagen {
+		width: 100%;
+		height: auto;
+	}
+	@keyframes header-animacion {
+	0% {
+		position: relative;
+		margin-top: 150%
+	}
+	60% {
+		position: relative;
+		margin-top: -5%;
+	}
+	100% {
+		position: relative;
+		margin-top: 0%;
+	}
+}
+.cabecera {
+	animation-name: header-animacion;
+	animation-duration: 2s;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-o-animation-delay: 1s;
+	animation-delay: 1s;
+}
+}
+
+@media (min-width: 900px) {
+	.contenido {
+		width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#contacto {
+		width: 20%;
+	}
+	#politicas {
+		width: 22%;
+	}
+	#redes {
+		width: 22%;
+	}
+	#derechos {
+		width: 20%;
+	}
+}
+
+.imagen img {
+	width: 100%;
+	height: auto;
+}
+
+.imagen {
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(100% - 4px);
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 400px) {
+  .imagen {
+    width: calc(32% - 6px);
+  }
+
+  .imagen:nth-of-type(2n) {
+    margin-right: 8px;
+  }
+
+  .imagen:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}
+
+.contenedor {
+	background-color: #d5c75f;
+	display: flex;
+  flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#imagen_1 {
+	filter: blur(3px);
+}
+
+.imagen:nth-child(2n) {
+	filter: grayscale(100%);
+}
+
+#imagen_3 {
+	filter: sepia(90%);
+}
